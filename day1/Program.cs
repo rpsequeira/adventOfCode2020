@@ -3,7 +3,7 @@ using Tools;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace adventofcode
+namespace adventofcode2020
 {
     class Program
     {
