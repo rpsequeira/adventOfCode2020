@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Tools
 {
@@ -62,6 +63,10 @@ namespace Tools
             var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             action();
             Console.WriteLine($"{desc} took {stopwatch.ElapsedMilliseconds} ms");
+        }
+
+        public static bool EvaluateRegex(string input, string regex){
+            return Regex.Match(input, regex, RegexOptions.IgnoreCase).Success;
         }
     }
 
